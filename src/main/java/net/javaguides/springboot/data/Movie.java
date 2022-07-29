@@ -4,8 +4,12 @@ import lombok.Data;
 
 
 public class Movie {
-    private String name;
+    private String title;
 
     Movie(){}
-    public Movie(String name){this.name = name;}
+    public Movie(String name){this.title = title;}
+
+    public String title() {
+        return title;
+    }
 }

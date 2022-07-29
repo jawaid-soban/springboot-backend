@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.contains;
 
 import java.util.List;
 
@@ -32,6 +33,7 @@ public class MovieScoreTest {
         movieStore.add(star_trek);
 
         List<Movie> results = movieStore.findByPartialTitle("arry");
-        assertThat(results.size(), is(0));
+        assertThat(results.size(), is(1));
+        assertThat(results, contains(harryPotter));
     }
 }
